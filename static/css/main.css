@@ -26,6 +26,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.2);
       }
 .cell--red {
             background-color: red;
@@ -38,6 +40,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
 }
 
 h1 {
