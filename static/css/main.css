@@ -1,0 +1,45 @@
+body {
+
+      align-items: center;
+      justify-content: center;
+      
+}
+.grid {
+      display: grid;
+      grid-template-columns: repeat(6, 50px);
+      grid-template-rows: repeat(6, 50px);
+      border: solid 1px black;
+      
+    }
+
+.cell {
+      background-color: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+.cell--green {
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+.cell--red {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+.cell--x {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+
+h1 {
+      font-size: 2rem;
+      border-bottom: solid 4px black;
+      align-items: center;
+}
