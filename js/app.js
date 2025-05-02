@@ -8,6 +8,15 @@ let moves = 0;
 
 document.getElementById("startMazeBtn").addEventListener("click", makeMaze);
 
+function makeMaze() {
+    const size = parseInt(document.getElementById('diffSelect').value);
+    maze = generateMaze(size, size);
+    player = { x: 1, y: 1 };
+    goal = { x: size - 2, y: size - 2 };
+    moves = 0;
+    drawMaze();
+  }
+  
 function generateMaze(rows, cols) {
   let maze = Array.from({ length: rows }, () => Array(cols).fill(1));
 
@@ -76,4 +85,3 @@ playerImage.onload = () => {
 };
 
 }
-drawMaze();
