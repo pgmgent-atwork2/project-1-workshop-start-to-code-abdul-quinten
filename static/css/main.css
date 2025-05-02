@@ -1,50 +1,32 @@
 body {
-
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      
-}
-.grid {
-      display: grid;
-      grid-template-columns: repeat(6, 50px);
-      grid-template-rows: repeat(6, 50px);
-      border: solid 1px black;
-      
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
     }
-
-.cell {
-      background-color: lightgray;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    
+    #mazeCanvas {
+      border: 2px solid #000;
+      background-color: white;
+      margin: 20px auto;
+      display: block;
     }
-
-.cell--green {
-      background-color: green;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-  transform: scale(1.2);
-      }
-.cell--red {
-            background-color: red;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-}
-.cell--x {
-            background-color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-}
-
-h1 {
-      font-size: 2rem;
-      border-bottom: solid 4px black;
-      align-items: center;
-}
+    
+    #Message-Container {
+      display: none;
+      background-color: #ffffffcc;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      z-index: 1000;
+    }
+    
+    select, button {
+      padding: 8px 16px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    
