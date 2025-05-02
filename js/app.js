@@ -85,3 +85,35 @@ playerImage.onload = () => {
 };
 
 }
+document.addEventListener('keydown', event => {
+    if (!maze.length) return;
+  
+    let { x, y } = player;
+    let newX = x;
+    let newY = y;
+  
+    if (event.key === 'ArrowUp') newY--;
+    else if (event.key === 'ArrowDown') newY++;
+    else if (event.key === 'ArrowLeft') newX--;
+    else if (event.key === 'ArrowRight') newX++;
+    else return;
+  
+    if (maze[newY]?.[newX] === 1) {
+ 
+      alert("Oops! You hit a wall. Starting over...");
+      player = { x: 1, y: 1 };  
+      moves = 0;
+    } else {
+     
+      player = { x: newX, y: newY };
+      moves++;
+    }
+  
+    drawMaze();
+  
+    if (player.x === goal.x && player.y === goal.y) {
+      document.getElementById('moves').textContent = `You moved ${moves} steps.`;
+      document.getElementById('Message-Container').style.display = 'block';
+    }
+  });
+  
